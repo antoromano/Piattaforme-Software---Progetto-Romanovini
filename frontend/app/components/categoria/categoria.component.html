@@ -1,0 +1,55 @@
+<section id="prodotto">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="productHeading text-center">
+                    <ul class="list-unstyled d-flex   justify-content-center ">
+                        <div class="col-12">
+                            <div class="row mt-3">
+                                <div class="card">
+                                    <img class="img-fluid" style="height: 150px;" style="width: 300;" [src]="categoria.urlImmagine" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </ul>
+                    {{categoria.descrizione}}
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row mt-3">
+                    <div class="col-lg-3 pt-1" *ngFor="let prodotto of prodotti">
+                        <div class="box-shadow">
+                            <div class="card">
+                                <img class="img-fluid" style="height: 200px;" [src]="prodotto.urlImmagine" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{prodotto.nome}}</h5>
+                                    <p class="card-text"><span
+                                            class="text-danger fw-semibold me-2">€ {{prodotto.prezzo}}</span>
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="card-text"><span
+                                                class="text-danger fw-semibold me-2">Quantità: {{prodotto.quantita}}</span>
+                                        </div>
+                                        <div class="col-6 text-end">
+                                            <button class="btn btn-sm btn-success" (click)="aggiungiAlCarrello(prodotto.id, prodotto.quantita!)"> Aggiungi al Carrello</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

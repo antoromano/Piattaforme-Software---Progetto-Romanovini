@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Benvenuto alla Homepage</h1>
+        <div class="user-info" id="userInfo"></div>
+    </header>
+    <main>
+        <p>Questa è la homepage del sito.</p>
+        
+        <div class="button-section">
+            <h2></h2>
+            <div class="button-container">
+                <button onclick="location.href='/login'">Vai al Login</button>
+                <button onclick="location.href='/register'">Vai alla Registrazione</button>
+                <button class="view-cart-button" onclick="viewCart()">Visualizza Carrello</button>
+                <button class="create-order-button" onclick="createOrder()">Crea Ordine</button>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <h2></h2>
+            <div class="button-container">
+                <button class="admin-button" id="viewUsersButton" style="display: none;" onclick="viewUsers()">Visualizza Utenti</button>
+                <button class="admin-button" id="viewOrdersButton" style="display: none;" onclick="viewOrders()">Visualizza Ordini</button>
+                <button onclick="location.href='/products'">Visualizza Prodotti</button>
+                <button onclick="location.href='/orders'">Storico Ordini</button>
+            </div>
+        </div>
+
+        <ul id="userList" style="display: none;"></ul>
+        <ul id="orderList" style="display: none;"></ul>
+        <div id="message"></div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

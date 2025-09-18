@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-8">
+        <div class="CartContainer">
+            <div class="row">
+              <div class="col-12">
+                <h3>Prodotti Carrello</h3>
+              </div> 
+            </div>
+            <div class="row pt-1" *ngFor="let cart of prodottiCarrello"> 
+              <div class="col-3">
+                <img class="img-fluid" style="height: 200px;" [src]="cart.prodottoId?.urlImmagine" class="card-img-top">
+              </div>
+              <div class="col-3">
+                {{cart.nomeProdotto}}
+              </div>
+              <div class="col-2">
+                {{cart.quantita}}
+              </div>
+              <div class="col-2 text-end">
+               {{ cart.prezzo}}
+              </div>
+              <div class="col-2 text-end">
+                <button class="btn btn-sm btn-danger" (click)="RemoveItem(cart.id)">Remove</button>
+               </div>
+            </div>
+           
+            <div class="row">
+              <div class="col-3">
+
+              </div>
+              <div class="col-9">
+                <hr>
+              </div>
+            </div>
+           
+            <div class="row">
+              <div class="col-2">
+                 
+              </div>
+              <div class="col-2">
+                 
+              </div>
+              <div class="col-4">
+                <div class="Subtotal">Sub-Totale</div>
+                <div> <small> {{prodottiCarrello.length}} prodotti</small></div>
+              </div>
+              <div class="col-4 text-end">
+                <strong> €{{subTotal}}</strong>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button class="btn btn-lg btn-success" (click)="makeSale(prodottiCarrello)"> Make Sale</button>
+                </div>
+            </div>
+             
+          </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotti Disponibili</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Prodotti Disponibili</h1>
+        <div class="user-info" id="userInfo"></div>
+        <button class="view-cart-button" onclick="viewCart()">Visualizza Carrello</button>
+        <button class="create-order-button" onclick="createOrder()">Crea Ordine</button>
+        <button class="admin-button" id="addProductButton" style="display: none;" onclick="addProduct()">Aggiungi Prodotto</button>
+    </header>
+    <main>
+        <ul id="productList"></ul>
+        <div id="message"></div>
+        <button onclick="location.href='/'">Torna alla Homepage</button>
+    </main>
+    <script src="js/products.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html> 

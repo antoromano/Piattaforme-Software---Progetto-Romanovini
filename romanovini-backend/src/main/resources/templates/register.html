@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione Utente</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registrazione Utente</h1>
+        <div class="user-info" id="userInfo"></div>
+    </header>
+    <main>
+        <form id="registerForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <label for="role">Ruolo:</label>
+            <select id="role" name="role">
+                <option value="cliente">Cliente</option>
+                <option value="admin">Admin</option>
+            </select>
+            <br>
+            <button type="submit">Registrati</button>
+        </form>
+        <div id="message"></div>
+        <button onclick="location.href='/'">Torna alla Homepage</button>
+    </main>
+    <script src="js/register.js"></script>
+</body>
+</html> 

@@ -1,0 +1,25 @@
+<a href="http://localhost:4200/dashboard" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-home fa-fw"></i>Home</a>
+<mat-divider></mat-divider>
+<button type="button" class="btn btn-danger" (click)="handleAddAction()">Aggiungi Prodotto</button>
+<table class="table">
+	<thead>
+	  <tr>
+		<th scope="col">Id</th>
+		<th scope="col">Codice</th>
+		<th scope="col">Nome</th>
+		<th scope="col">Prezzo</th>
+		<th scope="col">Descrizione</th>
+		<th scope="col">Quantità</th>
+	  </tr>
+	</thead>
+	<tbody *ngFor="let prod of Prodotti">
+	  <tr>
+		<th scope="row">{{prod.id}}</th>
+		<td>{{prod.codice}}</td>
+		<td>{{prod.nome}}</td>
+		<td> € {{prod.prezzo}}</td>
+		<td>{{prod.descrizione}}</td>
+		<td>{{prod.quantita}}</td>
+	  </tr>
+	</tbody>
+</table>

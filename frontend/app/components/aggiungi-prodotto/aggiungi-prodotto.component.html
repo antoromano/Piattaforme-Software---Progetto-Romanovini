@@ -1,0 +1,71 @@
+<div class="container">
+  
+    <section class="panel panel-default">
+  <div class="panel-heading"> 
+  <h3 class="panel-title">Aggiungi Prodotto</h3> 
+  </div> 
+  <div class="panel-body">
+    
+  <form action="designer-finish.html" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="codice" class="col-sm-3 control-label">Codice</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="codice" id="codice" placeholder=".." [(ngModel)]="prodotto.codice">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="nome" class="col-sm-3 control-label">Nome</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="nome" id="nome" placeholder=".." [(ngModel)]="prodotto.nome">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="prezzo" class="col-sm-3 control-label">Prezzo</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="prezzo" id="prezzo" placeholder=".." [(ngModel)]="prodotto.prezzo">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="descrizione" class="col-sm-3 control-label">Descrizione</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="descrizione" id="descrizione" placeholder=".." [(ngModel)]="prodotto.descrizione">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="quantita" class="col-sm-3 control-label">Quantità</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="quantita" id="quantita" placeholder=".." [(ngModel)]="prodotto.quantita">
+       </div>
+    </div>
+    <div class="form-group">
+        <label for="quantita" class="col-sm-3 control-label">Immagine</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="immagine" id="immagine" placeholder=".." [(ngModel)]="prodotto.urlImmagine">
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="tech" class="col-sm-3 control-label">Categoria</label>
+      <div class="col-sm-3">
+     <select class="form-control" [formControl]="categoria">
+    <option *ngFor="let c of categorie" value={{c.id}}>{{c.nome}}</option>
+     </select>
+      </div>
+    </div> <!-- form-group // -->
+  
+    <hr>
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <button type="submit" class="btn btn-primary" (click)="aggiungiProdotto()">Aggiungi Prodotto</button>
+        <span>-</span>
+                 
+        <button type="submit" class="btn btn-success" (click)="cancella()">Cancella</button>
+       </div>
+    </div> 
+
+  </form>
+    
+  </div><!-- panel-body // -->
+  </section><!-- panel// -->
+  
+    
+  </div> <!-- container// -->

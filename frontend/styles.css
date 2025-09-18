@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    padding-top: 80px;
+    font-family: sans-serif;
+}
+
+.common-form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid darkblue;
+    color: darkblue;
+}
+
+.form-button{
+    height: 35px;
+    border: 1px solid darkblue;
+    cursor: pointer;
+    background-color: darksalmon;
+    font-weight: 700;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

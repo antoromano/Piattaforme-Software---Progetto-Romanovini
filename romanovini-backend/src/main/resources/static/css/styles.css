@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.user-info {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+}
+
+button {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-button, .login-button, .register-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+}
+
+.logout-button:hover, .login-button:hover, .register-button:hover {
+    background-color: #d32f2f;
+}
+
+.admin-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+}
+
+.admin-button:hover {
+    background-color: #45a049;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.button-section {
+    margin-bottom: 30px;
+}
+
+.button-section h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+} 

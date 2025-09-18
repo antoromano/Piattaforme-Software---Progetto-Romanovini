@@ -1,0 +1,25 @@
+<p>I tuoi ordini:</p>
+<a href="http://localhost:4200/dashboard" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-home fa-fw"></i>Home</a>
+<table class="table">
+	<thead>
+	  <tr>
+		<th scope="col">Id</th>
+		<th scope="col">Data</th>
+		<th scope="col">Nome utente</th>
+        <th scope="col">Indirizzo</th>
+        <th scope="col"> Prodotti</th>
+	  </tr>
+	</thead>
+	<tbody *ngFor="let ord of ordini">
+	  <tr>
+		<th scope="row">{{ord.id}}</th>
+		<td>{{ord.data}}</td>
+		<td>{{ord.utente!.nome}}</td>
+        <td>{{ord.utente!.indirizzo}}</td>
+        <td>
+            <tr *ngFor="let p of ord.prodottiOrdinati">
+                <td scope="col">{{p.prodotto!.nome}},</td>
+            </tr>
+	  </tr>
+	</tbody>
+  </table>

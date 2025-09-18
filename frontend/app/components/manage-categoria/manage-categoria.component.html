@@ -1,0 +1,18 @@
+<a href="http://localhost:4200/dashboard" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-home fa-fw"></i>Home</a>
+<button type="button" class="btn btn-danger" (click)="handleAddAction()">Aggiungi Categoria</button>
+<table class="table">
+	<thead>
+	  <tr>
+		<th scope="col">Id</th>
+		<th scope="col">Nome</th>
+		<th scope="col">Descrizione</th>
+	  </tr>
+	</thead>
+	<tbody *ngFor="let cat of categorie">
+	  <tr>
+		<th scope="row">{{cat.id}}</th>
+		<td>{{cat.nome}}</td>
+		<td>{{cat.descrizione}}</td>
+	  </tr>
+	</tbody>
+  </table>
